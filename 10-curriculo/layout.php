@@ -8,6 +8,7 @@
   </head>
   <body>
     <div class="container">
+      <?= $conteudo ?>
     </div><!-- /container -->
   </body>
 </html>

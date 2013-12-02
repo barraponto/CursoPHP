@@ -20,7 +20,9 @@
       <?php if (!$item['termino']) { $item['termino'] = 'Atual'; } ?>
       <h3>
         <?= $item['ocupacao'] ?>
-        <span class="small"><?= $item['inicio'] . '&mdash;' . $item['termino'] . ': ' . $item['instituicao'] ?></span>
+        <span class="small">
+          <?= $item['inicio'] . '&mdash;' . $item['termino'] . ': ' . $item['instituicao'] ?>
+        </span>
       </h3>
     <?php endforeach; ?>
     </div><!-- /col -->
