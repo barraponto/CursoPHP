@@ -6,7 +6,7 @@
   </head>
   <body>
   <p><?php
-    print "Oi Mundo"
+    print "Oi Mundo";
     print "Tudo bom?";
   ?></p>
   </body>
