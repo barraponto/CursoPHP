@@ -1,0 +1,281 @@
+- Aula 3:
+  - Unidade 2:
+    - question: Substitua o MEUNOME pelo meu nome mesmo, isto é, a palavra Capi.
+      data:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: []
+          cursor: [17, 0]
+          content: "<?php print 'Oi MEUNOME!'; ?>"
+      expected:
+        expected_answer: "<?php print 'Oi Capi!'; ?>"
+  - Unidade 3:
+    - question: Remova a marcação de comentários no código abaixo.
+      data:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0]
+          cursor: [7, 1]
+          content: |
+            Tudo o que você precisa fazer é
+            <?php // print 'descomentar esta linha'; ?>.
+      expected:
+        expected_answer: |
+          Tudo o que você precisa fazer é
+          <?php print 'descomentar esta linha'; ?>.
+- Aula 4:
+  - Unidade 2:
+    - question: Graças a um patrocínio de última hora, o show da banda *Francisco, o Homem* será de graça. Retire a informação de venda da divulgação do show.
+      data:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0, 1, 3, 4, 5]
+          cursor: [0, 0]
+          content: |
+            <?php
+              $mensagem = "Dia 01/04 na Fábrica de Cultura Flaskô\n";
+              $mensagem .= "Entradas à venda no site http://festivalflasko.org.br\n";
+              $mensagem .= "Caravanas saindo de toda a Região Metropolitana de Campinas."; ?>
+            <h1>Francisco, o Homem -- ao vivo em São Paulo</h1>
+            <div><?php print $mensagem; ?></div>
+      expected:
+        expected_answer: |
+            <?php
+              $mensagem = "Dia 01/04 na Fábrica de Cultura Flaskô\n";
+              // $mensagem .= "Entradas à venda no site http://festivalflasko.org.br\n";
+              $mensagem .= "Caravanas saindo de toda a Região Metropolitana de Campinas."; ?>
+            <h1>Francisco, o Homem -- ao vivo em São Paulo</h1>
+            <div><?php print $mensagem; ?></div>
+- Aula 5:
+  - Unidade 2:
+    - question: Operadores de Acesso também podem ser usados para modificar o array. Veja no exercício abaixo como modificar um elemento específico de um array.
+      data:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,1,2,3,4,5,6,7,8,9,10,11]
+          cursor: [0, 12]
+          content: |
+            <?php
+              $precos = array(
+                'hamburger' => 5,
+                'x-burger' => 6,
+                'x-salada' => 7,
+                'x-bacon' => 8,
+              );
+
+            // Agora modificamos o preço do x-bacon:
+            $precos['x-bacon'] = 9;
+
+            // Agora modifique o preço do hamburger para 4.
+
+      expected:
+        expected_answer: |
+          <?php
+            $precos = array(
+              'hamburger' => 5,
+              'x-burger' => 6,
+              'x-salada' => 7,
+              'x-bacon' => 8,
+            );
+
+          // Agora modificamos o preço do x-bacon:
+          $precos['x-bacon'] = 9;
+
+          // Agora modifique o preço do hamburger para 4.
+          $precos['hamburger'] = 4;
+
+- Aula 6:
+  - Unidade 2:
+    - question: Assumindo que $pedido é o volume de produtos pedidos, cheque se o volume é maior do que 100 unidades.
+      data:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,2,3,4]
+          cursor: [6, 2]
+          content: |
+            <?php
+              if () {
+                // Volumes maiores do que 100 ganham 10% de desconto.
+                $custo = 0.9 * $custo;
+              }
+      expected:
+        expected_answer: |
+          <?php
+            if ($pedido > 100) {
+              // Volumes maiores do que 100 ganham 10% de desconto.
+              $custo = 0.9 * $custo;
+            }
+  - Unidade 3:
+    - question: Assumindo que $pedido é o volume de produtos pedidos, cheque se o volume é maior do que 100 unidades. Se não for, avise do desconto imprimindo a variável $mensagem.
+      data:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,1,2,3,4,6]
+          cursor: [0, 5]
+          content: |
+            <?php
+              if ($pedido > 100) {
+                // Volumes maiores do que 100 ganham 10% de desconto.
+                $custo = 0.9 * $custo;
+              } else {
+
+              }
+      expected:
+        expected_answer: |
+          <?php
+            if ($pedido > 100) {
+              // Volumes maiores do que 100 ganham 10% de desconto.
+              $custo = 0.9 * $custo;
+            } else {
+              print $mensagem;
+            }
+- Aula 7:
+  - Unidade 2:
+    - question: Imprima uma mensagem para cada item no array.
+      data:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,1,3,4]
+          cursor: [11, 2]
+          content: |
+            <?php
+              $ingredientes = array('hamburguer', 'queijo', 'alface', 'bacon');
+              foreach () {
+                print "Você quer $ingrediente no seu sanduiche?"
+              }
+      expected:
+        expected_answer: |
+          <?php
+            $ingredientes = array('hamburguer', 'queijo', 'alface', 'bacon');
+            foreach () {
+              print "Você quer $ingrediente no seu sanduiche?"
+            }
+  - Unidade 4:
+    - question: Imprima o nome dos funcionários e seu salário.
+      data:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,1,2,3,4,5,6,8,9]
+          cursor: [11, 7]
+          content: |
+            <?php
+            $funcionarios = array(
+              'John' => 2500,
+              'Paul' => 2500,
+              'George' => 2100,
+              'Ringo' => 1700,
+            );
+            foreach () {
+              print "$nome ($salario)";
+            }
+      expected:
+        expected_answer: |
+          <?php
+          $funcionarios = array(
+            'John' => 2500,
+            'Paul' => 2500,
+            'George' => 2100,
+            'Ringo' => 1700,
+          );
+          foreach ($funcionarios as $nome => $salario) {
+            print "$nome ($salario)";
+          }
+    - question: Imprima o nome de todos os funcionários que recebem mais de 2000 reais de salário.
+      data:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: []
+          cursor: [0, 0]
+          content: |
+            <?php
+            $funcionarios = array(
+              'John' => 2500,
+              'Paul' => 2500,
+              'George' => 2100,
+              'Ringo' => 1700,
+            );
+            foreach ($funcionarios as $nome => $salario) {
+              if () {
+                print "$nome";
+              }
+            }
+      expected:
+        expected_answer: |
+          <?php
+          $funcionarios = array(
+            'John' => 2500,
+            'Paul' => 2500,
+            'George' => 2100,
+            'Ringo' => 1700,
+          );
+          foreach ($funcionarios as $nome => $salario) {
+            if ($salario > 2000) {
+              print "$nome";
+            }
+          }
+- Aula 8:
+  - Unidade 3:
+    - question: Garanta a segurança do usuário usando `htmlspecialchars` para preparar as variáveis que vêm do formulário.
+      data:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,4]
+          cursor: [10, 1]
+          content: |
+            <?php
+              $termo = $_GET['termo'];
+              $numero = $_GET['numero'];
+              print "Exibindo $numero resultados para busca por <em>$termo</em>."
+      expected:
+        expected_answer: |
+          <?php
+            $termo = htmlspecialchars($_GET['termo']);
+            $numero = htmlspecialchars($_GET['numero']);
+            print "Exibindo $numero resultados para busca por <em>$termo</em>."
+  - Unidade 4
+    - question: Filtre os campos de email com o filtro `FILTER_VALIDATE_EMAIL` e confirme o registro do usuário.
+      data:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,1,3,4,5]
+          cursor: [13, 2]
+          content: |
+            <?php
+              $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+              $confirma = $_POST['confirma_email'];
+              // Checa se $email e $confirma passaram na validação e se são emails iguais.
+              if ($email && $confirma && $email == $confirma) {
+                print 'Obrigado, seu registro foi realizado.';
+              }
+      expected:
+        expected_answer: |
+          <?php
+            $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+            $confirma = filter_var($_POST['confirma_email'], FILTER_VALIDATE_EMAIL);
+            // Checa se $email e $confirma passaram na validação e se são emails iguais.
+            if ($email && $confirma && $email == $confirma) {
+              print 'Obrigado, seu registro foi realizado.';
+            }
+    - question: 
+      data:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: []
+          cursor: [0, 0]
+          content: |
+            <?php
+      expected:
+        expected_answer: |
+          <?php
