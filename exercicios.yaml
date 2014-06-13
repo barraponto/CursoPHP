@@ -242,7 +242,7 @@
             $termo = htmlspecialchars($_GET['termo']);
             $numero = htmlspecialchars($_GET['numero']);
             print "Exibindo $numero resultados para busca por <em>$termo</em>."
-  - Unidade 4
+  - Unidade 4:
     - question: Filtre os campos de email com o filtro `FILTER_VALIDATE_EMAIL` e confirme o registro do usuário.
       data:
         - index: 0
@@ -267,15 +267,162 @@
             if ($email && $confirma && $email == $confirma) {
               print 'Obrigado, seu registro foi realizado.';
             }
-    - question: 
+- Aula 10:
+  - Unidade 1:
+    - question: Inclua primeiro o arquivo `xadrez.inc` xadrex usando o `include_once` e em seguida o arquivo `jogo.tpl.php` usando `include`.
       data:
+        - index: 1
+          name: xadrez.inc
+          content: |
+            <?php
+              $nome = 'Xadrez';
+              $minjogadores = 2;
+              $maxjogadores = 2;
+              $duracao = '1 hora'
+        - index: 2
+          name: jogo.tpl.php
+          content: |
+            <h1><?= $nome ?></h1>
+            <ul>
+              <li>Jogadores: <?= $jogadores ?></li>
+              <li>Duração: <?= $duracao ?></li>
+            </ul>
         - index: 0
           name: index.php
           editable: true
-          lock: []
-          cursor: [0, 0]
+          lock: [0,2,3,4,5,6,7,8,9]
+          cursor: [15, 1]
           content: |
             <?php
+              include_once();
+
+              // Prepara os dados para enviar para o template.
+              if ($minjogadores == $maxjogadores) {
+                $jogadores = $minjogadores;
+              } else {
+                $jogadores = "$minjogadores a $maxjogadores";
+              }?>
+
+              include();
       expected:
         expected_answer: |
           <?php
+            include_once('xadrez.inc');
+
+            // Prepara os dados para enviar para o template.
+            if ($minjogadores == $maxjogadores) {
+              $jogadores = $minjogadores;
+            } else {
+              $jogadores = "$minjogadores a $maxjogadores";
+            }?>
+
+            include('jogo.tpl.php');
+  - Unidade 2:
+    - question: Inclua os arquivos `jogo.tpl.php`, `layout.tpl.php` e `xadrez.inc` na ordem certa.
+      data:
+        - index: 1
+          name: xadrez.inc
+          content: |
+            <?php
+              $nome = 'Xadrez';
+              $minjogadores = 2;
+              $maxjogadores = 2;
+              $duracao = '1 hora'
+        - index: 2
+          name: jogo.tpl.php
+          content: |
+            <h1><?= $nome ?></h1>
+            <ul>
+              <li>Jogadores: <?= $jogadores ?></li>
+              <li>Duração: <?= $duracao ?></li>
+            </ul>
+        - index: 3
+          name: layout.tpl.php
+          content: |
+            <html>
+              <head>
+                <meta charset="utf-8" />
+                <title><?= $nome ?></title>
+              </head>
+              <body>
+                <div class="container">
+                  <?= $conteudo ?>
+                </div><!-- /container -->
+              </body>
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,2,3,4,5,6,7,8,9,10,12,13,14]
+          cursor: [15, 1]
+          content: |
+            <?php
+              include_once();
+
+              // Prepara os dados para enviar para o template.
+              if ($minjogadores == $maxjogadores) {
+                $jogadores = $minjogadores;
+              } else {
+                $jogadores = "$minjogadores a $maxjogadores";
+              }?>
+
+              ob_start();
+              include();
+              $content = ob_get_clean()
+
+              include();
+      expected:
+        expected_answer: |
+          <?php
+            include_once('xadrez.inc');
+
+            // Prepara os dados para enviar para o template.
+            if ($minjogadores == $maxjogadores) {
+              $jogadores = $minjogadores;
+            } else {
+              $jogadores = "$minjogadores a $maxjogadores";
+            }?>
+
+            ob_start();
+            include('jogo.tpl.php');
+            $content = ob_get_clean()
+
+            include('layout.php');
+  - Unidade 3:
+    - question: Isole o processamento dos jogadores em uma função separada. Lembre-se que as variáveis são nomeadas na hora de definir a função. Lembre-se também que a função não deve atribuir o resultado a uma variável, mas devolver o resultado (com `return`). E não se esqueça de copiar e colar!
+      data:
+        - index: 0
+          name: utilidades.php
+          editable: true
+          lock: [0,1,2,3,4,5,6,7,8,9,10,12]
+          cursor: [0, 0]
+          content: |
+            <?php
+
+              // Lógica original do arquivo index.php
+              // if ($minjogadores == $maxjogadores) {
+              //   $jogadores = $minjogadores;
+              // } else {
+              //   $jogadores = "$minjogadores a $maxjogadores";
+              // }
+
+              function numero_de_jogadores($min, $max) {
+
+              }
+      expected:
+        expected_answer: |
+          <?php
+
+            // Lógica original do arquivo index.php
+            // if ($minjogadores == $maxjogadores) {
+            //   $jogadores = $minjogadores;
+            // } else {
+            //   $jogadores = "$minjogadores a $maxjogadores";
+            // }
+
+            function numero_de_jogadores($min, $max) {
+              if ($min == $max) {
+                return $min;
+              } else {
+                return "$min a $max.";
+              }
+            }
