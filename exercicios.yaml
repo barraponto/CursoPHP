@@ -426,3 +426,155 @@
                 return "$min a $max.";
               }
             }
+- Aula 11:
+  - Unidade 1:
+    - question: Crie uma classe de objetos chamada `Livro` com três propriedades `titulo`, `autor` e `ano`
+      data:
+        - index: 0
+          name: livro.php
+          editable: true
+          lock: [0]
+          cursor: [2, 1]
+          content: |
+            <?php
+              
+      expected:
+        expected_answer: |
+          <?php
+            class Livro {
+              public $titulo;
+              public $autor;
+              public $ano;
+            }
+    - question: Agora crie um objeto do tipo `Livro` (usando `new`) e defina as propriedades como descrito nos comentários do código.
+      data:
+        - index: 1
+          name: livro.php
+          content: |
+            <?php
+              // Para criar um objeto do tipo Livro, escreva:
+              // $livro = new Livro();
+              class Livro {
+                public $titulo;
+                public $autor;
+                public $ano;
+              }
+        - index: 0
+          name: index.php
+          editable: true
+          lock: []
+          cursor: [0, 0]
+          content: |
+            <?php
+              require 'livro.php';
+
+              $livro = ;
+
+              // Declare 'Machado de Assis' como autor, 1899 como ano e 'Dom Casmurro' como titulo.
+              $livro->autor = ;
+      expected:
+        expected_answer: |
+          <?php
+            require 'livro.php';
+
+            $livro = new Livro();
+
+            // Declare 'Machado de Assis' como autor, 1899 como ano e 'Dom Casmurro' como titulo.
+            $livro->autor = 'Machado de Assis';
+            $livro->ano = 1899;
+            $livro->titulo = 'Dom Casmurro';
+  - Unidade 2:
+    - question: Imprima o século do livro usando o método `seculo`.
+      data:
+        - index: 1
+          name: livro.php
+          content: |
+            <?php
+              // Para criar um objeto do tipo Livro, escreva:
+              // $livro = new Livro();
+              class Livro {
+                public $titulo;
+                public $autor;
+                public $ano;
+
+                public function seculo() {
+                  // ceil() arredonda qualquer valor decimal pra cima.
+                  // 1900 é século 19
+                  // 1901 é século 20
+                  return ceil($this->ano/100);
+                }
+              }
+        - index: 0
+          name: index.php
+          editable: true
+          lock: []
+          cursor: [0, 0]
+          content: |
+            <?php
+              require 'livro.php';
+
+              $livro = new Livro();
+              $livro->autor = 'Machado de Assis';
+              $livro->ano = 1899;
+              $livro->titulo = 'Dom Casmurro';
+
+              print $livro->titulo . " foi escrito no século " . ;
+      expected:
+        expected_answer: |
+          <?php
+            require 'livro.php';
+
+            $livro = new Livro();
+            $livro->autor = 'Machado de Assis';
+            $livro->ano = 1899;
+            $livro->titulo = 'Dom Casmurro';
+
+            print $livro->titulo . " foi escrito no século " . $livro->seculo();
+  - Unidade 3:
+    - question: Crie um objeto representando o livro Dom Casmurro. Leia a função `Livro->__construct` para conferir os argumentos.
+      data:
+        - index: 1
+          name: livro.php
+          content: |
+            <?php
+              // Para criar um objeto do tipo Livro, escreva:
+              // $livro = new Livro();
+              class Livro {
+                public $titulo;
+                public $autor;
+                public $ano;
+
+                public function __construct($titulo, $ano, $autor='Desconhecido') {
+                  $this->$titulo = $titulo;
+                  $this->$ano = $ano;
+                  $this->$autor = $autor;
+                }
+              }
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,1,2,3,4,5,6,7,8,9]
+          cursor: [21, 10]
+          content: |
+            <?php
+              require 'livro.php';
+
+              // @XXX: Código antigo, usar o novo método __construct
+              // $livro = new Livro();
+              // $livro->autor = 'Machado de Assis';
+              // $livro->ano = 1899;
+              // $livro->titulo = 'Dom Casmurro';
+
+              $livro = new Livro();
+      expected:
+        expected_answer: |
+          <?php
+              require 'livro.php';
+
+              // @XXX: Código antigo, usar o novo método __construct
+              // $livro = new Livro();
+              // $livro->autor = 'Machado de Assis';
+              // $livro->ano = 1899;
+              // $livro->titulo = 'Dom Casmurro';
+
+              $livro = new Livro('Machado de Assis', 1899, 'Dom Casmurro');
