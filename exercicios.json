@@ -1,587 +1,795 @@
-[
-    {
-        "Aula 3": [
-            {
-                "Unidade 2": [
+{
+    "162": [
+        {
+            "data": {
+                "files": [
                     {
-                        "data": [
-                            {
-                                "content": "<?php print 'Oi MEUNOME!'; ?>",
-                                "cursor": [
-                                    17,
-                                    0
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [],
-                                "name": "index.php"
-                            }
+                        "content": "<?php print 'Oi MEUNOME!'; ?>",
+                        "cursor": [
+                            17,
+                            0
                         ],
-                        "expected": {
-                            "expected_answer": "<?php print 'Oi Capi!'; ?>"
-                        },
-                        "question": "Substitua o MEUNOME pelo meu nome mesmo, isto \u00e9, a palavra Capi."
+                        "editable": true,
+                        "index": 0,
+                        "lock": [],
+                        "name": "index.php"
                     }
-                ]
+                ],
+                "question": "Substitua o MEUNOME pelo meu nome mesmo, isto \u00e9, a palavra Capi."
             },
-            {
-                "Unidade 3": [
-                    {
-                        "data": [
-                            {
-                                "content": "Tudo o que voc\u00ea precisa fazer \u00e9\n<?php // print 'descomentar esta linha'; ?>.\n",
-                                "cursor": [
-                                    7,
-                                    1
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0
-                                ],
-                                "name": "index.php"
-                            }
-                        ],
-                        "expected": {
-                            "expected_answer": "Tudo o que voc\u00ea precisa fazer \u00e9\n<?php print 'descomentar esta linha'; ?>.\n"
-                        },
-                        "question": "Remova a marca\u00e7\u00e3o de coment\u00e1rios no c\u00f3digo abaixo."
-                    }
-                ]
+            "expected": {
+                "expected_answer": "<?php print 'Oi Capi!'; ?>"
             }
-        ]
-    },
-    {
-        "Aula 4": [
-            {
-                "Unidade 2": [
+        }
+    ],
+    "163": [
+        {
+            "data": {
+                "files": [
                     {
-                        "data": [
-                            {
-                                "content": "<?php\n  $mensagem = \"Dia 01/04 na F\u00e1brica de Cultura Flask\u00f4\\n\";\n  $mensagem .= \"Entradas \u00e0 venda no site http://festivalflasko.org.br\\n\";\n  $mensagem .= \"Caravanas saindo de toda a Regi\u00e3o Metropolitana de Campinas.\"; ?>\n<h1>Francisco, o Homem -- ao vivo em S\u00e3o Paulo</h1>\n<div><?php print $mensagem; ?></div>\n",
-                                "cursor": [
-                                    0,
-                                    0
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0,
-                                    1,
-                                    3,
-                                    4,
-                                    5
-                                ],
-                                "name": "index.php"
-                            }
+                        "content": "Tudo o que voc\u00ea precisa fazer \u00e9\n<?php // print 'descomentar esta linha'; ?>.\n",
+                        "cursor": [
+                            7,
+                            1
                         ],
-                        "expected": {
-                            "expected_answer": "<?php\n  $mensagem = \"Dia 01/04 na F\u00e1brica de Cultura Flask\u00f4\\n\";\n  // $mensagem .= \"Entradas \u00e0 venda no site http://festivalflasko.org.br\\n\";\n  $mensagem .= \"Caravanas saindo de toda a Regi\u00e3o Metropolitana de Campinas.\"; ?>\n<h1>Francisco, o Homem -- ao vivo em S\u00e3o Paulo</h1>\n<div><?php print $mensagem; ?></div>\n"
-                        },
-                        "question": "Gra\u00e7as a um patroc\u00ednio de \u00faltima hora, o show da banda *Francisco, o Homem* ser\u00e1 de gra\u00e7a. Retire a informa\u00e7\u00e3o de venda da divulga\u00e7\u00e3o do show."
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Aula 5": [
-            {
-                "Unidade 2": [
-                    {
-                        "data": [
-                            {
-                                "content": "<?php\n  $precos = array(\n    'hamburger' => 5,\n    'x-burger' => 6,\n    'x-salada' => 7,\n    'x-bacon' => 8,\n  );\n\n// Agora modificamos o pre\u00e7o do x-bacon:\n$precos['x-bacon'] = 9;\n\n// Agora modifique o pre\u00e7o do hamburger para 4.\n",
-                                "cursor": [
-                                    0,
-                                    12
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0,
-                                    1,
-                                    2,
-                                    3,
-                                    4,
-                                    5,
-                                    6,
-                                    7,
-                                    8,
-                                    9,
-                                    10,
-                                    11
-                                ],
-                                "name": "index.php"
-                            }
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0
                         ],
-                        "expected": {
-                            "expected_answer": "<?php\n  $precos = array(\n    'hamburger' => 5,\n    'x-burger' => 6,\n    'x-salada' => 7,\n    'x-bacon' => 8,\n  );\n\n// Agora modificamos o pre\u00e7o do x-bacon:\n$precos['x-bacon'] = 9;\n\n// Agora modifique o pre\u00e7o do hamburger para 4.\n$precos['hamburger'] = 4;\n"
-                        },
-                        "question": "Operadores de Acesso tamb\u00e9m podem ser usados para modificar o array. Veja no exerc\u00edcio abaixo como modificar um elemento espec\u00edfico de um array."
+                        "name": "index.php"
                     }
-                ]
-            }
-        ]
-    },
-    {
-        "Aula 6": [
-            {
-                "Unidade 2": [
-                    {
-                        "data": [
-                            {
-                                "content": "<?php\n  if () {\n    // Volumes maiores do que 100 ganham 10% de desconto.\n    $custo = 0.9 * $custo;\n  }\n",
-                                "cursor": [
-                                    6,
-                                    2
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0,
-                                    2,
-                                    3,
-                                    4
-                                ],
-                                "name": "index.php"
-                            }
-                        ],
-                        "expected": {
-                            "expected_answer": "<?php\n  if ($pedido > 100) {\n    // Volumes maiores do que 100 ganham 10% de desconto.\n    $custo = 0.9 * $custo;\n  }\n"
-                        },
-                        "question": "Assumindo que $pedido \u00e9 o volume de produtos pedidos, cheque se o volume \u00e9 maior do que 100 unidades."
-                    }
-                ]
+                ],
+                "question": "Remova a marca\u00e7\u00e3o de coment\u00e1rios no c\u00f3digo abaixo."
             },
-            {
-                "Unidade 3": [
-                    {
-                        "data": [
-                            {
-                                "content": "<?php\n  if ($pedido > 100) {\n    // Volumes maiores do que 100 ganham 10% de desconto.\n    $custo = 0.9 * $custo;\n  } else {\n\n  }\n",
-                                "cursor": [
-                                    0,
-                                    5
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0,
-                                    1,
-                                    2,
-                                    3,
-                                    4,
-                                    6
-                                ],
-                                "name": "index.php"
-                            }
-                        ],
-                        "expected": {
-                            "expected_answer": "<?php\n  if ($pedido > 100) {\n    // Volumes maiores do que 100 ganham 10% de desconto.\n    $custo = 0.9 * $custo;\n  } else {\n    print $mensagem;\n  }\n"
-                        },
-                        "question": "Assumindo que $pedido \u00e9 o volume de produtos pedidos, cheque se o volume \u00e9 maior do que 100 unidades. Se n\u00e3o for, avise do desconto imprimindo a vari\u00e1vel $mensagem."
-                    }
-                ]
+            "expected": {
+                "expected_answer": "Tudo o que voc\u00ea precisa fazer \u00e9\n<?php print 'descomentar esta linha'; ?>.\n"
             }
-        ]
-    },
-    {
-        "Aula 7": [
-            {
-                "Unidade 2": [
+        }
+    ],
+    "168": [
+        {
+            "data": {
+                "files": [
                     {
-                        "data": [
-                            {
-                                "content": "<?php\n  $ingredientes = array('hamburguer', 'queijo', 'alface', 'bacon');\n  foreach () {\n    print \"Voc\u00ea quer $ingrediente no seu sanduiche?\"\n  }\n",
-                                "cursor": [
-                                    11,
-                                    2
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0,
-                                    1,
-                                    3,
-                                    4
-                                ],
-                                "name": "index.php"
-                            }
+                        "content": "<?php\n  $mensagem = \"Dia 01/04 na F\u00e1brica de Cultura Flask\u00f4\\n\";\n  $mensagem .= \"Entradas \u00e0 venda no site http://festivalflasko.org.br\\n\";\n  $mensagem .= \"Caravanas saindo de toda a Regi\u00e3o Metropolitana de Campinas.\"; ?>\n<h1>Francisco, o Homem -- ao vivo em S\u00e3o Paulo</h1>\n<div><?php print $mensagem; ?></div>\n",
+                        "cursor": [
+                            0,
+                            0
                         ],
-                        "expected": {
-                            "expected_answer": "<?php\n  $ingredientes = array('hamburguer', 'queijo', 'alface', 'bacon');\n  foreach () {\n    print \"Voc\u00ea quer $ingrediente no seu sanduiche?\"\n  }\n"
-                        },
-                        "question": "Imprima uma mensagem para cada item no array."
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            3,
+                            4,
+                            5
+                        ],
+                        "name": "index.php"
                     }
-                ]
+                ],
+                "question": "Gra\u00e7as a um patroc\u00ednio de \u00faltima hora, o show da banda *Francisco, o Homem* ser\u00e1 de gra\u00e7a. Retire a informa\u00e7\u00e3o de venda da divulga\u00e7\u00e3o do show."
             },
-            {
-                "Unidade 4": [
+            "expected": {
+                "expected_answer": "<?php\n  $mensagem = \"Dia 01/04 na F\u00e1brica de Cultura Flask\u00f4\\n\";\n  // $mensagem .= \"Entradas \u00e0 venda no site http://festivalflasko.org.br\\n\";\n  $mensagem .= \"Caravanas saindo de toda a Regi\u00e3o Metropolitana de Campinas.\"; ?>\n<h1>Francisco, o Homem -- ao vivo em S\u00e3o Paulo</h1>\n<div><?php print $mensagem; ?></div>\n"
+            }
+        }
+    ],
+    "172": [
+        {
+            "data": {
+                "files": [
                     {
-                        "data": [
-                            {
-                                "content": "<?php\n$funcionarios = array(\n  'John' => 2500,\n  'Paul' => 2500,\n  'George' => 2100,\n  'Ringo' => 1700,\n);\nforeach () {\n  print \"$nome ($salario)\";\n}\n",
-                                "cursor": [
-                                    11,
-                                    7
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0,
-                                    1,
-                                    2,
-                                    3,
-                                    4,
-                                    5,
-                                    6,
-                                    8,
-                                    9
-                                ],
-                                "name": "index.php"
-                            }
+                        "content": "<?php\n  $precos = array(\n    'hamburger' => 5,\n    'x-burger' => 6,\n    'x-salada' => 7,\n    'x-bacon' => 8,\n  );\n\n// Agora modificamos o pre\u00e7o do x-bacon:\n$precos['x-bacon'] = 9;\n\n// Agora modifique o pre\u00e7o do hamburger para 4.\n",
+                        "cursor": [
+                            0,
+                            12
                         ],
-                        "expected": {
-                            "expected_answer": "<?php\n$funcionarios = array(\n  'John' => 2500,\n  'Paul' => 2500,\n  'George' => 2100,\n  'Ringo' => 1700,\n);\nforeach ($funcionarios as $nome => $salario) {\n  print \"$nome ($salario)\";\n}\n"
-                        },
-                        "question": "Imprima o nome dos funcion\u00e1rios e seu sal\u00e1rio."
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9,
+                            10,
+                            11
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Operadores de Acesso tamb\u00e9m podem ser usados para modificar o array. Veja no exerc\u00edcio abaixo como modificar um elemento espec\u00edfico de um array."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  $precos = array(\n    'hamburger' => 5,\n    'x-burger' => 6,\n    'x-salada' => 7,\n    'x-bacon' => 8,\n  );\n\n// Agora modificamos o pre\u00e7o do x-bacon:\n$precos['x-bacon'] = 9;\n\n// Agora modifique o pre\u00e7o do hamburger para 4.\n$precos['hamburger'] = 4;\n"
+            }
+        }
+    ],
+    "174": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  if () {\n    // Volumes maiores do que 100 ganham 10% de desconto.\n    $custo = 0.9 * $custo;\n  }\n",
+                        "cursor": [
+                            6,
+                            2
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            2,
+                            3,
+                            4
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Assumindo que $pedido \u00e9 o volume de produtos pedidos, cheque se o volume \u00e9 maior do que 100 unidades."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  if ($pedido > 100) {\n    // Volumes maiores do que 100 ganham 10% de desconto.\n    $custo = 0.9 * $custo;\n  }\n"
+            }
+        }
+    ],
+    "175": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  if ($pedido > 100) {\n    // Volumes maiores do que 100 ganham 10% de desconto.\n    $custo = 0.9 * $custo;\n  } else {\n\n  }\n",
+                        "cursor": [
+                            0,
+                            5
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            6
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Assumindo que $pedido \u00e9 o volume de produtos pedidos, cheque se o volume \u00e9 maior do que 100 unidades. Se n\u00e3o for, avise do desconto imprimindo a vari\u00e1vel $mensagem."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  if ($pedido > 100) {\n    // Volumes maiores do que 100 ganham 10% de desconto.\n    $custo = 0.9 * $custo;\n  } else {\n    print $mensagem;\n  }\n"
+            }
+        }
+    ],
+    "177": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  $ingredientes = array('hamburguer', 'queijo', 'alface', 'bacon');\n  foreach () {\n    print \"Voc\u00ea quer $ingrediente no seu sanduiche?\"\n  }\n",
+                        "cursor": [
+                            11,
+                            2
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            3,
+                            4
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Imprima uma mensagem para cada item no array."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  $ingredientes = array('hamburguer', 'queijo', 'alface', 'bacon');\n  foreach () {\n    print \"Voc\u00ea quer $ingrediente no seu sanduiche?\"\n  }\n"
+            }
+        }
+    ],
+    "179": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n$funcionarios = array(\n  'John' => 2500,\n  'Paul' => 2500,\n  'George' => 2100,\n  'Ringo' => 1700,\n);\nforeach () {\n  print \"$nome ($salario)\";\n}\n",
+                        "cursor": [
+                            11,
+                            7
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            8,
+                            9
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Imprima o nome dos funcion\u00e1rios e seu sal\u00e1rio."
+            },
+            "expected": {
+                "expected_answer": "<?php\n$funcionarios = array(\n  'John' => 2500,\n  'Paul' => 2500,\n  'George' => 2100,\n  'Ringo' => 1700,\n);\nforeach ($funcionarios as $nome => $salario) {\n  print \"$nome ($salario)\";\n}\n"
+            }
+        },
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n$funcionarios = array(\n  'John' => 2500,\n  'Paul' => 2500,\n  'George' => 2100,\n  'Ringo' => 1700,\n);\nforeach ($funcionarios as $nome => $salario) {\n  if () {\n    print \"$nome\";\n  }\n}\n",
+                        "cursor": [
+                            0,
+                            0
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            9,
+                            10,
+                            11
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Imprima o nome de todos os funcion\u00e1rios que recebem mais de 2000 reais de sal\u00e1rio."
+            },
+            "expected": {
+                "expected_answer": "<?php\n$funcionarios = array(\n  'John' => 2500,\n  'Paul' => 2500,\n  'George' => 2100,\n  'Ringo' => 1700,\n);\nforeach ($funcionarios as $nome => $salario) {\n  if ($salario > 2000) {\n    print \"$nome\";\n  }\n}\n"
+            }
+        }
+    ],
+    "183": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  $termo = $_GET['termo'];\n  $numero = $_GET['numero'];\n  print \"Exibindo $numero resultados para busca por <em>$termo</em>.\"\n",
+                        "cursor": [
+                            10,
+                            1
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            4
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Garanta a seguran\u00e7a do usu\u00e1rio usando `htmlspecialchars` para preparar as vari\u00e1veis que v\u00eam do formul\u00e1rio."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  $termo = htmlspecialchars($_GET['termo']);\n  $numero = htmlspecialchars($_GET['numero']);\n  print \"Exibindo $numero resultados para busca por <em>$termo</em>.\"\n"
+            }
+        }
+    ],
+    "184": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);\n  $confirma = $_POST['confirma_email'];\n  // Checa se $email e $confirma passaram na valida\u00e7\u00e3o e se s\u00e3o emails iguais.\n  if ($email && $confirma && $email == $confirma) {\n    print 'Obrigado, seu registro foi realizado.';\n  }\n",
+                        "cursor": [
+                            13,
+                            2
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            3,
+                            4,
+                            5
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Filtre os campos de email com o filtro `FILTER_VALIDATE_EMAIL` e confirme o registro do usu\u00e1rio."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);\n  $confirma = filter_var($_POST['confirma_email'], FILTER_VALIDATE_EMAIL);\n  // Checa se $email e $confirma passaram na valida\u00e7\u00e3o e se s\u00e3o emails iguais.\n  if ($email && $confirma && $email == $confirma) {\n    print 'Obrigado, seu registro foi realizado.';\n  }\n"
+            }
+        }
+    ],
+    "189": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  $nome = 'Xadrez';\n  $minjogadores = 2;\n  $maxjogadores = 2;\n  $duracao = '1 hora'\n",
+                        "index": 1,
+                        "name": "xadrez.inc"
                     },
                     {
-                        "data": [
-                            {
-                                "content": "<?php\n$funcionarios = array(\n  'John' => 2500,\n  'Paul' => 2500,\n  'George' => 2100,\n  'Ringo' => 1700,\n);\nforeach ($funcionarios as $nome => $salario) {\n  if () {\n    print \"$nome\";\n  }\n}\n",
-                                "cursor": [
-                                    0,
-                                    0
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [],
-                                "name": "index.php"
-                            }
-                        ],
-                        "expected": {
-                            "expected_answer": "<?php\n$funcionarios = array(\n  'John' => 2500,\n  'Paul' => 2500,\n  'George' => 2100,\n  'Ringo' => 1700,\n);\nforeach ($funcionarios as $nome => $salario) {\n  if ($salario > 2000) {\n    print \"$nome\";\n  }\n}\n"
-                        },
-                        "question": "Imprima o nome de todos os funcion\u00e1rios que recebem mais de 2000 reais de sal\u00e1rio."
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Aula 8": [
-            {
-                "Unidade 3": [
-                    {
-                        "data": [
-                            {
-                                "content": "<?php\n  $termo = $_GET['termo'];\n  $numero = $_GET['numero'];\n  print \"Exibindo $numero resultados para busca por <em>$termo</em>.\"\n",
-                                "cursor": [
-                                    10,
-                                    1
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0,
-                                    4
-                                ],
-                                "name": "index.php"
-                            }
-                        ],
-                        "expected": {
-                            "expected_answer": "<?php\n  $termo = htmlspecialchars($_GET['termo']);\n  $numero = htmlspecialchars($_GET['numero']);\n  print \"Exibindo $numero resultados para busca por <em>$termo</em>.\"\n"
-                        },
-                        "question": "Garanta a seguran\u00e7a do usu\u00e1rio usando `htmlspecialchars` para preparar as vari\u00e1veis que v\u00eam do formul\u00e1rio."
-                    }
-                ]
-            },
-            {
-                "Unidade 4": [
-                    {
-                        "data": [
-                            {
-                                "content": "<?php\n  $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);\n  $confirma = $_POST['confirma_email'];\n  // Checa se $email e $confirma passaram na valida\u00e7\u00e3o e se s\u00e3o emails iguais.\n  if ($email && $confirma && $email == $confirma) {\n    print 'Obrigado, seu registro foi realizado.';\n  }\n",
-                                "cursor": [
-                                    13,
-                                    2
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0,
-                                    1,
-                                    3,
-                                    4,
-                                    5
-                                ],
-                                "name": "index.php"
-                            }
-                        ],
-                        "expected": {
-                            "expected_answer": "<?php\n  $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);\n  $confirma = filter_var($_POST['confirma_email'], FILTER_VALIDATE_EMAIL);\n  // Checa se $email e $confirma passaram na valida\u00e7\u00e3o e se s\u00e3o emails iguais.\n  if ($email && $confirma && $email == $confirma) {\n    print 'Obrigado, seu registro foi realizado.';\n  }\n"
-                        },
-                        "question": "Filtre os campos de email com o filtro `FILTER_VALIDATE_EMAIL` e confirme o registro do usu\u00e1rio."
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Aula 10": [
-            {
-                "Unidade 1": [
-                    {
-                        "data": [
-                            {
-                                "content": "<?php\n  $nome = 'Xadrez';\n  $minjogadores = 2;\n  $maxjogadores = 2;\n  $duracao = '1 hora'\n",
-                                "index": 1,
-                                "name": "xadrez.inc"
-                            },
-                            {
-                                "content": "<h1><?= $nome ?></h1>\n<ul>\n  <li>Jogadores: <?= $jogadores ?></li>\n  <li>Dura\u00e7\u00e3o: <?= $duracao ?></li>\n</ul>\n",
-                                "index": 2,
-                                "name": "jogo.tpl.php"
-                            },
-                            {
-                                "content": "<?php\n  include_once();\n\n  // Prepara os dados para enviar para o template.\n  if ($minjogadores == $maxjogadores) {\n    $jogadores = $minjogadores;\n  } else {\n    $jogadores = \"$minjogadores a $maxjogadores\";\n  }?>\n\n  include();\n",
-                                "cursor": [
-                                    15,
-                                    1
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0,
-                                    2,
-                                    3,
-                                    4,
-                                    5,
-                                    6,
-                                    7,
-                                    8,
-                                    9
-                                ],
-                                "name": "index.php"
-                            }
-                        ],
-                        "expected": {
-                            "expected_answer": "<?php\n  include_once('xadrez.inc');\n\n  // Prepara os dados para enviar para o template.\n  if ($minjogadores == $maxjogadores) {\n    $jogadores = $minjogadores;\n  } else {\n    $jogadores = \"$minjogadores a $maxjogadores\";\n  }?>\n\n  include('jogo.tpl.php');\n"
-                        },
-                        "question": "Inclua primeiro o arquivo `xadrez.inc` xadrex usando o `include_once` e em seguida o arquivo `jogo.tpl.php` usando `include`."
-                    }
-                ]
-            },
-            {
-                "Unidade 2": [
-                    {
-                        "data": [
-                            {
-                                "content": "<?php\n  $nome = 'Xadrez';\n  $minjogadores = 2;\n  $maxjogadores = 2;\n  $duracao = '1 hora'\n",
-                                "index": 1,
-                                "name": "xadrez.inc"
-                            },
-                            {
-                                "content": "<h1><?= $nome ?></h1>\n<ul>\n  <li>Jogadores: <?= $jogadores ?></li>\n  <li>Dura\u00e7\u00e3o: <?= $duracao ?></li>\n</ul>\n",
-                                "index": 2,
-                                "name": "jogo.tpl.php"
-                            },
-                            {
-                                "content": "<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title><?= $nome ?></title>\n  </head>\n  <body>\n    <div class=\"container\">\n      <?= $conteudo ?>\n    </div><!-- /container -->\n  </body>\n",
-                                "index": 3,
-                                "name": "layout.tpl.php"
-                            },
-                            {
-                                "content": "<?php\n  include_once();\n\n  // Prepara os dados para enviar para o template.\n  if ($minjogadores == $maxjogadores) {\n    $jogadores = $minjogadores;\n  } else {\n    $jogadores = \"$minjogadores a $maxjogadores\";\n  }?>\n\n  ob_start();\n  include();\n  $content = ob_get_clean()\n\n  include();\n",
-                                "cursor": [
-                                    15,
-                                    1
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0,
-                                    2,
-                                    3,
-                                    4,
-                                    5,
-                                    6,
-                                    7,
-                                    8,
-                                    9,
-                                    10,
-                                    12,
-                                    13,
-                                    14
-                                ],
-                                "name": "index.php"
-                            }
-                        ],
-                        "expected": {
-                            "expected_answer": "<?php\n  include_once('xadrez.inc');\n\n  // Prepara os dados para enviar para o template.\n  if ($minjogadores == $maxjogadores) {\n    $jogadores = $minjogadores;\n  } else {\n    $jogadores = \"$minjogadores a $maxjogadores\";\n  }?>\n\n  ob_start();\n  include('jogo.tpl.php');\n  $content = ob_get_clean()\n\n  include('layout.php');\n"
-                        },
-                        "question": "Inclua os arquivos `jogo.tpl.php`, `layout.tpl.php` e `xadrez.inc` na ordem certa."
-                    }
-                ]
-            },
-            {
-                "Unidade 3": [
-                    {
-                        "data": [
-                            {
-                                "content": "<?php\n\n  // L\u00f3gica original do arquivo index.php\n  // if ($minjogadores == $maxjogadores) {\n  //   $jogadores = $minjogadores;\n  // } else {\n  //   $jogadores = \"$minjogadores a $maxjogadores\";\n  // }\n\n  function numero_de_jogadores($min, $max) {\n\n  }\n",
-                                "cursor": [
-                                    0,
-                                    0
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0,
-                                    1,
-                                    2,
-                                    3,
-                                    4,
-                                    5,
-                                    6,
-                                    7,
-                                    8,
-                                    9,
-                                    10,
-                                    12
-                                ],
-                                "name": "utilidades.php"
-                            }
-                        ],
-                        "expected": {
-                            "expected_answer": "<?php\n\n  // L\u00f3gica original do arquivo index.php\n  // if ($minjogadores == $maxjogadores) {\n  //   $jogadores = $minjogadores;\n  // } else {\n  //   $jogadores = \"$minjogadores a $maxjogadores\";\n  // }\n\n  function numero_de_jogadores($min, $max) {\n    if ($min == $max) {\n      return $min;\n    } else {\n      return \"$min a $max.\";\n    }\n  }\n"
-                        },
-                        "question": "Isole o processamento dos jogadores em uma fun\u00e7\u00e3o separada. Lembre-se que as vari\u00e1veis s\u00e3o nomeadas na hora de definir a fun\u00e7\u00e3o. Lembre-se tamb\u00e9m que a fun\u00e7\u00e3o n\u00e3o deve atribuir o resultado a uma vari\u00e1vel, mas devolver o resultado (com `return`). E n\u00e3o se esque\u00e7a de copiar e colar!"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Aula 11": [
-            {
-                "Unidade 1": [
-                    {
-                        "data": [
-                            {
-                                "content": "<?php\n  \n",
-                                "cursor": [
-                                    2,
-                                    1
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0
-                                ],
-                                "name": "livro.php"
-                            }
-                        ],
-                        "expected": {
-                            "expected_answer": "<?php\n  class Livro {\n    public $titulo;\n    public $autor;\n    public $ano;\n  }\n"
-                        },
-                        "question": "Crie uma classe de objetos chamada `Livro` com tr\u00eas propriedades `titulo`, `autor` e `ano`"
+                        "content": "<h1><?= $nome ?></h1>\n<ul>\n  <li>Jogadores: <?= $jogadores ?></li>\n  <li>Dura\u00e7\u00e3o: <?= $duracao ?></li>\n</ul>\n",
+                        "index": 2,
+                        "name": "jogo.tpl.php"
                     },
                     {
-                        "data": [
-                            {
-                                "content": "<?php\n  // Para criar um objeto do tipo Livro, escreva:\n  // $livro = new Livro();\n  class Livro {\n    public $titulo;\n    public $autor;\n    public $ano;\n  }\n",
-                                "index": 1,
-                                "name": "livro.php"
-                            },
-                            {
-                                "content": "<?php\n  require 'livro.php';\n\n  $livro = ;\n\n  // Declare 'Machado de Assis' como autor, 1899 como ano e 'Dom Casmurro' como titulo.\n  $livro->autor = ;\n",
-                                "cursor": [
-                                    0,
-                                    0
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [],
-                                "name": "index.php"
-                            }
+                        "content": "<?php\n  include_once();\n\n  // Prepara os dados para enviar para o template.\n  if ($minjogadores == $maxjogadores) {\n    $jogadores = $minjogadores;\n  } else {\n    $jogadores = \"$minjogadores a $maxjogadores\";\n  }?>\n\n  include();\n",
+                        "cursor": [
+                            15,
+                            1
                         ],
-                        "expected": {
-                            "expected_answer": "<?php\n  require 'livro.php';\n\n  $livro = new Livro();\n\n  // Declare 'Machado de Assis' como autor, 1899 como ano e 'Dom Casmurro' como titulo.\n  $livro->autor = 'Machado de Assis';\n  $livro->ano = 1899;\n  $livro->titulo = 'Dom Casmurro';\n"
-                        },
-                        "question": "Agora crie um objeto do tipo `Livro` (usando `new`) e defina as propriedades como descrito nos coment\u00e1rios do c\u00f3digo."
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9
+                        ],
+                        "name": "index.php"
                     }
-                ]
+                ],
+                "question": "Inclua primeiro o arquivo `xadrez.inc` xadrex usando o `include_once` e em seguida o arquivo `jogo.tpl.php` usando `include`."
             },
-            {
-                "Unidade 2": [
-                    {
-                        "data": [
-                            {
-                                "content": "<?php\n  // Para criar um objeto do tipo Livro, escreva:\n  // $livro = new Livro();\n  class Livro {\n    public $titulo;\n    public $autor;\n    public $ano;\n\n    public function seculo() {\n      // ceil() arredonda qualquer valor decimal pra cima.\n      // 1900 \u00e9 s\u00e9culo 19\n      // 1901 \u00e9 s\u00e9culo 20\n      return ceil($this->ano/100);\n    }\n  }\n",
-                                "index": 1,
-                                "name": "livro.php"
-                            },
-                            {
-                                "content": "<?php\n  require 'livro.php';\n\n  $livro = new Livro();\n  $livro->autor = 'Machado de Assis';\n  $livro->ano = 1899;\n  $livro->titulo = 'Dom Casmurro';\n\n  print $livro->titulo . \" foi escrito no s\u00e9culo \" . ;\n",
-                                "cursor": [
-                                    0,
-                                    0
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [],
-                                "name": "index.php"
-                            }
-                        ],
-                        "expected": {
-                            "expected_answer": "<?php\n  require 'livro.php';\n\n  $livro = new Livro();\n  $livro->autor = 'Machado de Assis';\n  $livro->ano = 1899;\n  $livro->titulo = 'Dom Casmurro';\n\n  print $livro->titulo . \" foi escrito no s\u00e9culo \" . $livro->seculo();\n"
-                        },
-                        "question": "Imprima o s\u00e9culo do livro usando o m\u00e9todo `seculo`."
-                    }
-                ]
-            },
-            {
-                "Unidade 3": [
-                    {
-                        "data": [
-                            {
-                                "content": "<?php\n  // Para criar um objeto do tipo Livro, escreva:\n  // $livro = new Livro();\n  class Livro {\n    public $titulo;\n    public $autor;\n    public $ano;\n\n    public function __construct($titulo, $ano, $autor='Desconhecido') {\n      $this->$titulo = $titulo;\n      $this->$ano = $ano;\n      $this->$autor = $autor;\n    }\n  }\n",
-                                "index": 1,
-                                "name": "livro.php"
-                            },
-                            {
-                                "content": "<?php\n  require 'livro.php';\n\n  // @XXX: C\u00f3digo antigo, usar o novo m\u00e9todo __construct\n  // $livro = new Livro();\n  // $livro->autor = 'Machado de Assis';\n  // $livro->ano = 1899;\n  // $livro->titulo = 'Dom Casmurro';\n\n  $livro = new Livro();\n",
-                                "cursor": [
-                                    21,
-                                    10
-                                ],
-                                "editable": true,
-                                "index": 0,
-                                "lock": [
-                                    0,
-                                    1,
-                                    2,
-                                    3,
-                                    4,
-                                    5,
-                                    6,
-                                    7,
-                                    8,
-                                    9
-                                ],
-                                "name": "index.php"
-                            }
-                        ],
-                        "expected": {
-                            "expected_answer": "<?php\n    require 'livro.php';\n\n    // @XXX: C\u00f3digo antigo, usar o novo m\u00e9todo __construct\n    // $livro = new Livro();\n    // $livro->autor = 'Machado de Assis';\n    // $livro->ano = 1899;\n    // $livro->titulo = 'Dom Casmurro';\n\n    $livro = new Livro('Machado de Assis', 1899, 'Dom Casmurro');\n"
-                        },
-                        "question": "Crie um objeto representando o livro Dom Casmurro. Leia a fun\u00e7\u00e3o `Livro->__construct` para conferir os argumentos."
-                    }
-                ]
+            "expected": {
+                "expected_answer": "<?php\n  include_once('xadrez.inc');\n\n  // Prepara os dados para enviar para o template.\n  if ($minjogadores == $maxjogadores) {\n    $jogadores = $minjogadores;\n  } else {\n    $jogadores = \"$minjogadores a $maxjogadores\";\n  }?>\n\n  include('jogo.tpl.php');\n"
             }
-        ]
-    }
-]
+        }
+    ],
+    "190": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  $nome = 'Xadrez';\n  $minjogadores = 2;\n  $maxjogadores = 2;\n  $duracao = '1 hora'\n",
+                        "index": 1,
+                        "name": "xadrez.inc"
+                    },
+                    {
+                        "content": "<h1><?= $nome ?></h1>\n<ul>\n  <li>Jogadores: <?= $jogadores ?></li>\n  <li>Dura\u00e7\u00e3o: <?= $duracao ?></li>\n</ul>\n",
+                        "index": 2,
+                        "name": "jogo.tpl.php"
+                    },
+                    {
+                        "content": "<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title><?= $nome ?></title>\n  </head>\n  <body>\n    <div class=\"container\">\n      <?= $conteudo ?>\n    </div><!-- /container -->\n  </body>\n",
+                        "index": 3,
+                        "name": "layout.tpl.php"
+                    },
+                    {
+                        "content": "<?php\n  include_once();\n\n  // Prepara os dados para enviar para o template.\n  if ($minjogadores == $maxjogadores) {\n    $jogadores = $minjogadores;\n  } else {\n    $jogadores = \"$minjogadores a $maxjogadores\";\n  }?>\n\n  ob_start();\n  include();\n  $content = ob_get_clean()\n\n  include();\n",
+                        "cursor": [
+                            15,
+                            1
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9,
+                            10,
+                            12,
+                            13,
+                            14
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Inclua os arquivos `jogo.tpl.php`, `layout.tpl.php` e `xadrez.inc` na ordem certa."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  include_once('xadrez.inc');\n\n  // Prepara os dados para enviar para o template.\n  if ($minjogadores == $maxjogadores) {\n    $jogadores = $minjogadores;\n  } else {\n    $jogadores = \"$minjogadores a $maxjogadores\";\n  }?>\n\n  ob_start();\n  include('jogo.tpl.php');\n  $content = ob_get_clean()\n\n  include('layout.php');\n"
+            }
+        }
+    ],
+    "191": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n\n  // L\u00f3gica original do arquivo index.php\n  // if ($minjogadores == $maxjogadores) {\n  //   $jogadores = $minjogadores;\n  // } else {\n  //   $jogadores = \"$minjogadores a $maxjogadores\";\n  // }\n\n  function numero_de_jogadores($min, $max) {\n\n  }\n",
+                        "cursor": [
+                            0,
+                            0
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9,
+                            10,
+                            12
+                        ],
+                        "name": "utilidades.php"
+                    }
+                ],
+                "question": "Isole o processamento dos jogadores em uma fun\u00e7\u00e3o separada. Lembre-se que as vari\u00e1veis s\u00e3o nomeadas na hora de definir a fun\u00e7\u00e3o. Lembre-se tamb\u00e9m que a fun\u00e7\u00e3o n\u00e3o deve atribuir o resultado a uma vari\u00e1vel, mas devolver o resultado (com `return`). E n\u00e3o se esque\u00e7a de copiar e colar!"
+            },
+            "expected": {
+                "expected_answer": "<?php\n\n  // L\u00f3gica original do arquivo index.php\n  // if ($minjogadores == $maxjogadores) {\n  //   $jogadores = $minjogadores;\n  // } else {\n  //   $jogadores = \"$minjogadores a $maxjogadores\";\n  // }\n\n  function numero_de_jogadores($min, $max) {\n    if ($min == $max) {\n      return $min;\n    } else {\n      return \"$min a $max.\";\n    }\n  }\n"
+            }
+        }
+    ],
+    "192": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  \n",
+                        "cursor": [
+                            2,
+                            1
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0
+                        ],
+                        "name": "livro.php"
+                    }
+                ],
+                "question": "Crie uma classe de objetos chamada `Livro` com tr\u00eas propriedades `titulo`, `autor` e `ano`"
+            },
+            "expected": {
+                "expected_answer": "<?php\n  class Livro {\n    public $titulo;\n    public $autor;\n    public $ano;\n  }\n"
+            }
+        },
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  // Para criar um objeto do tipo Livro, escreva:\n  // $livro = new Livro();\n  class Livro {\n    public $titulo;\n    public $autor;\n    public $ano;\n  }\n",
+                        "index": 1,
+                        "name": "livro.php"
+                    },
+                    {
+                        "content": "<?php\n  require 'livro.php';\n\n  $livro = ;\n\n  // Declare 'Machado de Assis' como autor, 1899 como ano e 'Dom Casmurro' como titulo.\n  $livro->autor = ;\n",
+                        "cursor": [
+                            0,
+                            0
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            4,
+                            5,
+                            6
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Agora crie um objeto do tipo `Livro` (usando `new`) e defina as propriedades como descrito nos coment\u00e1rios do c\u00f3digo."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  require 'livro.php';\n\n  $livro = new Livro();\n\n  // Declare 'Machado de Assis' como autor, 1899 como ano e 'Dom Casmurro' como titulo.\n  $livro->autor = 'Machado de Assis';\n  $livro->ano = 1899;\n  $livro->titulo = 'Dom Casmurro';\n"
+            }
+        }
+    ],
+    "193": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  // Para criar um objeto do tipo Livro, escreva:\n  // $livro = new Livro();\n  class Livro {\n    public $titulo;\n    public $autor;\n    public $ano;\n\n    public function seculo() {\n      // ceil() arredonda qualquer valor decimal pra cima.\n      // 1900 \u00e9 s\u00e9culo 19\n      // 1901 \u00e9 s\u00e9culo 20\n      return ceil($this->ano/100);\n    }\n  }\n",
+                        "index": 1,
+                        "name": "livro.php"
+                    },
+                    {
+                        "content": "<?php\n  require 'livro.php';\n\n  $livro = new Livro();\n  $livro->autor = 'Machado de Assis';\n  $livro->ano = 1899;\n  $livro->titulo = 'Dom Casmurro';\n\n  print $livro->titulo . \" foi escrito no s\u00e9culo \" . ;\n",
+                        "cursor": [
+                            0,
+                            0
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Imprima o s\u00e9culo do livro usando o m\u00e9todo `seculo`."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  require 'livro.php';\n\n  $livro = new Livro();\n  $livro->autor = 'Machado de Assis';\n  $livro->ano = 1899;\n  $livro->titulo = 'Dom Casmurro';\n\n  print $livro->titulo . \" foi escrito no s\u00e9culo \" . $livro->seculo();\n"
+            }
+        }
+    ],
+    "194": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  // Para criar um objeto do tipo Livro, escreva:\n  // $livro = new Livro();\n  class Livro {\n    public $titulo;\n    public $autor;\n    public $ano;\n\n    public function __construct($titulo, $ano, $autor='Desconhecido') {\n      $this->$titulo = $titulo;\n      $this->$ano = $ano;\n      $this->$autor = $autor;\n    }\n  }\n",
+                        "index": 1,
+                        "name": "livro.php"
+                    },
+                    {
+                        "content": "<?php\n  require 'livro.php';\n\n  // @XXX: C\u00f3digo antigo, usar o novo m\u00e9todo __construct\n  // $livro = new Livro();\n  // $livro->autor = 'Machado de Assis';\n  // $livro->ano = 1899;\n  // $livro->titulo = 'Dom Casmurro';\n\n  $livro = new Livro();\n",
+                        "cursor": [
+                            21,
+                            10
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Crie um objeto representando o livro Dom Casmurro. Leia a fun\u00e7\u00e3o `Livro->__construct` para conferir os argumentos."
+            },
+            "expected": {
+                "expected_answer": "<?php\n    require 'livro.php';\n\n    // @XXX: C\u00f3digo antigo, usar o novo m\u00e9todo __construct\n    // $livro = new Livro();\n    // $livro->autor = 'Machado de Assis';\n    // $livro->ano = 1899;\n    // $livro->titulo = 'Dom Casmurro';\n\n    $livro = new Livro('Machado de Assis', 1899, 'Dom Casmurro');\n"
+            }
+        }
+    ],
+    "195": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n\n  class Livro {\n    public $titulo;\n    public $autor;\n    public $ano;\n\n    public function __construct($titulo, $ano, $autor='Desconhecido') {\n      $this->$titulo = $titulo;\n      $this->$ano = $ano;\n      $this->$autor = $autor;\n    }\n  }\n\n  class HQ extends Livro {\n    public $edicao;\n\n    public function __construct($titulo, $ano, $autor='Desconhecido', $edicao=NULL) {\n      parent::__construct($titulo, $ano, $autor='Desconhecido');\n      $this->edicao = $edicao;\n    }\n  }\n",
+                        "index": 1,
+                        "name": "livro.php"
+                    },
+                    {
+                        "content": "<?php\n  require 'livro.php';\n\n  // @XXX: C\u00f3digo antigo, usar o novo m\u00e9todo __construct\n  // $livro = new Livro();\n  // $livro->autor = 'Machado de Assis';\n  // $livro->ano = 1899;\n  // $livro->titulo = 'Dom Casmurro';\n\n  $livro = new Livro();\n",
+                        "cursor": [
+                            21,
+                            10
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Crie um objeto representando a edi\u00e7\u00e3o 491 do quadrinho do Batman. Leia a fun\u00e7\u00e3o `HQ->__construct` para conferir os argumentos."
+            },
+            "expected": {
+                "expected_answer": "<?php\n    require 'livro.php';\n\n    // @XXX: C\u00f3digo antigo, usar o novo m\u00e9todo __construct\n    // $livro = new Livro();\n    // $livro->autor = 'Machado de Assis';\n    // $livro->ano = 1899;\n    // $livro->titulo = 'Dom Casmurro';\n\n    $livro = new Livro('Machado de Assis', 1899, 'Dom Casmurro');\n"
+            }
+        }
+    ],
+    "198": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n\n  class Livro {\n    public $titulo;\n    public $autor;\n    public $ano;\n\n    public function __construct($titulo, $ano, $autor='Desconhecido') {\n      $this->$titulo = $titulo;\n      $this->$ano = $ano;\n      $this->$autor = $autor;\n    }\n  }\n",
+                        "index": 1,
+                        "name": "livro.php"
+                    },
+                    {
+                        "content": "<?php\n  require 'livro.php';\n  $livro = new Livro('Machado de Assis', 1899, 'Dom Casmurro');\n\n  $handle = new PDO('mysql:host=localhost;dbname=aplicativo', 'admin', 'admin');\n  $consulta = $handle->prepare(\n    'INSERT INTO livros (titulo, autor, ano) VALUES (:titulo, :autor, :ano)'\n  );\n  $consulta->execute(array(\n    ':titulo' => ,\n    ':autor' => ,\n    ':ano' => ,\n  ));\n",
+                        "cursor": [
+                            17,
+                            9
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            12
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Execute a query abaixo passando os valores corretos no array."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  require 'livro.php';\n  $livro = new Livro('Machado de Assis', 1899, 'Dom Casmurro');\n\n  $handle = new PDO('mysql:host=localhost;dbname=aplicativo', 'admin', 'admin');\n  $consulta = $handle->prepare(\n    'INSERT INTO livros (titulo, autor, ano) VALUES (:titulo, :autor, :ano)'\n  );\n  $consulta->execute(array(\n    ':titulo' => $livro->titulo,\n    ':autor' => $livro->autor,\n    ':ano' => $livro->ano,\n  ));\n"
+            }
+        }
+    ],
+    "200": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  $consulta = $handle->prepare('SELECT * FROM livros WHERE autor=:id');\n  $consulta->execute(array());\n\n  while ($resultado = $consulta->fetchObject()) {\n    print \"<li>$resultado->titulo</li>\";\n  }\n",
+                        "cursor": [
+                            27,
+                            2
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            3,
+                            4,
+                            5,
+                            6
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Recupere do banco de dados todos os livros do Machado de Assis."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  $consulta = $handle->prepare('SELECT * FROM livros WHERE autor=:id');\n  $consulta->execute(array(':autor' => 'Machado de Assis'));\n\n  while ($resultado = $consulta->fetchObject()) {\n    print \"<li>$resultado->titulo</li>\";\n  }\n"
+            }
+        }
+    ],
+    "201": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  // A idade do usu\u00e1rio vem em $_GET['idade'], vamos tirar um eventual espa\u00e7o que venha junto.\n  $idade = trim($_GET['idade']);\n  if () {\n    print 'Por favor informe sua idade usando apenas n\u00fameros.'\n  }\n",
+                        "cursor": [
+                            6,
+                            3
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            4,
+                            5,
+                            6
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Use `is_numeric` para exibir uma mensagem de erro para o usu\u00e1rio."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  // A idade do usu\u00e1rio vem em $_GET['idade'], vamos tirar um eventual espa\u00e7o que venha junto.\n  $idade = trim($_GET['idade']);\n  if (!is_numeric($idade)) {\n    print 'Por favor informe sua idade usando apenas n\u00fameros.'\n  }\n"
+            }
+        },
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\n  // O nome do usu\u00e1rio vem em $_GET['nome'], vamos tirar um eventual espa\u00e7o que venha junto.\n  $nome = trim($_GET['nome']);\n\n  if () {\n    print 'Por favor, n\u00e3o deixe de informar seu nome.'\n  }\n  else if () {\n    print 'Oi Capi!.'\n  }\n",
+                        "cursor": [
+                            6,
+                            4
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            5,
+                            6,
+                            8,
+                            9
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Cheque se o nome do usu\u00e1rio foi preenchido (usando `empty`) e se come\u00e7a com 'Capi' (usando `strpos`)."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  // O nome do usu\u00e1rio vem em $_GET['nome'], vamos tirar um eventual espa\u00e7o que venha junto.\n  $nome = trim($_GET['nome']);\n\n  if (empty($nome)) {\n    print 'Por favor, n\u00e3o deixe de informar seu nome.'\n  }\n  else if (strpos($nome, 'Capi') === 0) {\n    print 'Oi Capi!.'\n  }\n"
+            }
+        }
+    ],
+    "203": [
+        {
+            "data": {
+                "files": [
+                    {
+                        "content": "<?php\nclass Produto {\n  public $nome;\n  public $estoque;\n\n  public function __construct($nome, $estoque=0) {\n    $this->nome = $nome;\n    $this->estoque = $estoque;\n  }\n}\n",
+                        "index": 1,
+                        "name": "produto.inc"
+                    },
+                    {
+                        "content": "<?php\n  require 'produto.inc';\n  $produtos = array(\n    Produto('frigideira', 10),\n    Produto('bule', 0),\n    Produto('chaleira', 5),\n    Produto('panela de press\u00e3o', 5),\n    Produto('wok', 0),\n  );\n  $produtos_no_estoque = array_filter($produtos, function($produto) {\n\n  });\n",
+                        "cursor": [
+                            0,
+                            10
+                        ],
+                        "editable": true,
+                        "index": 0,
+                        "lock": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            8,
+                            9,
+                            11
+                        ],
+                        "name": "index.php"
+                    }
+                ],
+                "question": "Filtre todos os produtos que tem um estoque menor do que 3."
+            },
+            "expected": {
+                "expected_answer": "<?php\n  require 'produto.inc';\n  $produtos = array(\n    Produto('frigideira', 10),\n    Produto('bule', 0),\n    Produto('chaleira', 5),\n    Produto('panela de press\u00e3o', 5),\n    Produto('wok', 0),\n  );\n  $produtos_no_estoque = array_filter($produtos, function($produto) {\n    return $produto->estoque;\n  });\n"
+            }
+        }
+    ]
+}

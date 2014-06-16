@@ -1,18 +1,19 @@
-- Aula 3:
-  - Unidade 2:
-    - question: Substitua o MEUNOME pelo meu nome mesmo, isto é, a palavra Capi.
-      data:
+162:
+  - data:
+      question: Substitua o MEUNOME pelo meu nome mesmo, isto é, a palavra Capi.
+      files:
         - index: 0
           name: index.php
           editable: true
           lock: []
           cursor: [17, 0]
           content: "<?php print 'Oi MEUNOME!'; ?>"
-      expected:
-        expected_answer: "<?php print 'Oi Capi!'; ?>"
-  - Unidade 3:
-    - question: Remova a marcação de comentários no código abaixo.
-      data:
+    expected:
+      expected_answer: "<?php print 'Oi Capi!'; ?>"
+163:
+  - data:
+      question: Remova a marcação de comentários no código abaixo.
+      files:
         - index: 0
           name: index.php
           editable: true
@@ -21,14 +22,14 @@
           content: |
             Tudo o que você precisa fazer é
             <?php // print 'descomentar esta linha'; ?>.
-      expected:
-        expected_answer: |
-          Tudo o que você precisa fazer é
-          <?php print 'descomentar esta linha'; ?>.
-- Aula 4:
-  - Unidade 2:
-    - question: Graças a um patrocínio de última hora, o show da banda *Francisco, o Homem* será de graça. Retire a informação de venda da divulgação do show.
-      data:
+    expected:
+      expected_answer: |
+        Tudo o que você precisa fazer é
+        <?php print 'descomentar esta linha'; ?>.
+168:
+  - data:
+      question: Graças a um patrocínio de última hora, o show da banda *Francisco, o Homem* será de graça. Retire a informação de venda da divulgação do show.
+      files:
         - index: 0
           name: index.php
           editable: true
@@ -41,18 +42,18 @@
               $mensagem .= "Caravanas saindo de toda a Região Metropolitana de Campinas."; ?>
             <h1>Francisco, o Homem -- ao vivo em São Paulo</h1>
             <div><?php print $mensagem; ?></div>
-      expected:
-        expected_answer: |
-            <?php
-              $mensagem = "Dia 01/04 na Fábrica de Cultura Flaskô\n";
-              // $mensagem .= "Entradas à venda no site http://festivalflasko.org.br\n";
-              $mensagem .= "Caravanas saindo de toda a Região Metropolitana de Campinas."; ?>
-            <h1>Francisco, o Homem -- ao vivo em São Paulo</h1>
-            <div><?php print $mensagem; ?></div>
-- Aula 5:
-  - Unidade 2:
-    - question: Operadores de Acesso também podem ser usados para modificar o array. Veja no exercício abaixo como modificar um elemento específico de um array.
-      data:
+    expected:
+      expected_answer: |
+          <?php
+            $mensagem = "Dia 01/04 na Fábrica de Cultura Flaskô\n";
+            // $mensagem .= "Entradas à venda no site http://festivalflasko.org.br\n";
+            $mensagem .= "Caravanas saindo de toda a Região Metropolitana de Campinas."; ?>
+          <h1>Francisco, o Homem -- ao vivo em São Paulo</h1>
+          <div><?php print $mensagem; ?></div>
+172:
+  - data:
+      question: Operadores de Acesso também podem ser usados para modificar o array. Veja no exercício abaixo como modificar um elemento específico de um array.
+      files:
         - index: 0
           name: index.php
           editable: true
@@ -72,26 +73,26 @@
 
             // Agora modifique o preço do hamburger para 4.
 
-      expected:
-        expected_answer: |
-          <?php
-            $precos = array(
-              'hamburger' => 5,
-              'x-burger' => 6,
-              'x-salada' => 7,
-              'x-bacon' => 8,
-            );
+    expected:
+      expected_answer: |
+        <?php
+          $precos = array(
+            'hamburger' => 5,
+            'x-burger' => 6,
+            'x-salada' => 7,
+            'x-bacon' => 8,
+          );
 
-          // Agora modificamos o preço do x-bacon:
-          $precos['x-bacon'] = 9;
+        // Agora modificamos o preço do x-bacon:
+        $precos['x-bacon'] = 9;
 
-          // Agora modifique o preço do hamburger para 4.
-          $precos['hamburger'] = 4;
+        // Agora modifique o preço do hamburger para 4.
+        $precos['hamburger'] = 4;
 
-- Aula 6:
-  - Unidade 2:
-    - question: Assumindo que $pedido é o volume de produtos pedidos, cheque se o volume é maior do que 100 unidades.
-      data:
+174:
+  - data:
+      question: Assumindo que $pedido é o volume de produtos pedidos, cheque se o volume é maior do que 100 unidades.
+      files:
         - index: 0
           name: index.php
           editable: true
@@ -103,16 +104,17 @@
                 // Volumes maiores do que 100 ganham 10% de desconto.
                 $custo = 0.9 * $custo;
               }
-      expected:
-        expected_answer: |
-          <?php
-            if ($pedido > 100) {
-              // Volumes maiores do que 100 ganham 10% de desconto.
-              $custo = 0.9 * $custo;
-            }
-  - Unidade 3:
-    - question: Assumindo que $pedido é o volume de produtos pedidos, cheque se o volume é maior do que 100 unidades. Se não for, avise do desconto imprimindo a variável $mensagem.
-      data:
+    expected:
+      expected_answer: |
+        <?php
+          if ($pedido > 100) {
+            // Volumes maiores do que 100 ganham 10% de desconto.
+            $custo = 0.9 * $custo;
+          }
+175:
+  - data:
+      question: Assumindo que $pedido é o volume de produtos pedidos, cheque se o volume é maior do que 100 unidades. Se não for, avise do desconto imprimindo a variável $mensagem.
+      files:
         - index: 0
           name: index.php
           editable: true
@@ -126,19 +128,19 @@
               } else {
 
               }
-      expected:
-        expected_answer: |
-          <?php
-            if ($pedido > 100) {
-              // Volumes maiores do que 100 ganham 10% de desconto.
-              $custo = 0.9 * $custo;
-            } else {
-              print $mensagem;
-            }
-- Aula 7:
-  - Unidade 2:
-    - question: Imprima uma mensagem para cada item no array.
-      data:
+    expected:
+      expected_answer: |
+        <?php
+          if ($pedido > 100) {
+            // Volumes maiores do que 100 ganham 10% de desconto.
+            $custo = 0.9 * $custo;
+          } else {
+            print $mensagem;
+          }
+177:
+  - data:
+      question: Imprima uma mensagem para cada item no array.
+      files:
         - index: 0
           name: index.php
           editable: true
@@ -150,16 +152,17 @@
               foreach () {
                 print "Você quer $ingrediente no seu sanduiche?"
               }
-      expected:
-        expected_answer: |
-          <?php
-            $ingredientes = array('hamburguer', 'queijo', 'alface', 'bacon');
-            foreach () {
-              print "Você quer $ingrediente no seu sanduiche?"
-            }
-  - Unidade 4:
-    - question: Imprima o nome dos funcionários e seu salário.
-      data:
+    expected:
+      expected_answer: |
+        <?php
+          $ingredientes = array('hamburguer', 'queijo', 'alface', 'bacon');
+          foreach () {
+            print "Você quer $ingrediente no seu sanduiche?"
+          }
+179:
+  - data:
+      question: Imprima o nome dos funcionários e seu salário.
+      files:
         - index: 0
           name: index.php
           editable: true
@@ -176,24 +179,25 @@
             foreach () {
               print "$nome ($salario)";
             }
-      expected:
-        expected_answer: |
-          <?php
-          $funcionarios = array(
-            'John' => 2500,
-            'Paul' => 2500,
-            'George' => 2100,
-            'Ringo' => 1700,
-          );
-          foreach ($funcionarios as $nome => $salario) {
-            print "$nome ($salario)";
-          }
-    - question: Imprima o nome de todos os funcionários que recebem mais de 2000 reais de salário.
-      data:
+    expected:
+      expected_answer: |
+        <?php
+        $funcionarios = array(
+          'John' => 2500,
+          'Paul' => 2500,
+          'George' => 2100,
+          'Ringo' => 1700,
+        );
+        foreach ($funcionarios as $nome => $salario) {
+          print "$nome ($salario)";
+        }
+  - data:
+      question: Imprima o nome de todos os funcionários que recebem mais de 2000 reais de salário.
+      files:
         - index: 0
           name: index.php
           editable: true
-          lock: []
+          lock: [0,1,2,3,4,5,6,7,9,10,11]
           cursor: [0, 0]
           content: |
             <?php
@@ -208,24 +212,24 @@
                 print "$nome";
               }
             }
-      expected:
-        expected_answer: |
-          <?php
-          $funcionarios = array(
-            'John' => 2500,
-            'Paul' => 2500,
-            'George' => 2100,
-            'Ringo' => 1700,
-          );
-          foreach ($funcionarios as $nome => $salario) {
-            if ($salario > 2000) {
-              print "$nome";
-            }
+    expected:
+      expected_answer: |
+        <?php
+        $funcionarios = array(
+          'John' => 2500,
+          'Paul' => 2500,
+          'George' => 2100,
+          'Ringo' => 1700,
+        );
+        foreach ($funcionarios as $nome => $salario) {
+          if ($salario > 2000) {
+            print "$nome";
           }
-- Aula 8:
-  - Unidade 3:
-    - question: Garanta a segurança do usuário usando `htmlspecialchars` para preparar as variáveis que vêm do formulário.
-      data:
+        }
+183:
+  - data:
+      question: Garanta a segurança do usuário usando `htmlspecialchars` para preparar as variáveis que vêm do formulário.
+      files:
         - index: 0
           name: index.php
           editable: true
@@ -236,15 +240,16 @@
               $termo = $_GET['termo'];
               $numero = $_GET['numero'];
               print "Exibindo $numero resultados para busca por <em>$termo</em>."
-      expected:
-        expected_answer: |
-          <?php
-            $termo = htmlspecialchars($_GET['termo']);
-            $numero = htmlspecialchars($_GET['numero']);
-            print "Exibindo $numero resultados para busca por <em>$termo</em>."
-  - Unidade 4:
-    - question: Filtre os campos de email com o filtro `FILTER_VALIDATE_EMAIL` e confirme o registro do usuário.
-      data:
+    expected:
+      expected_answer: |
+        <?php
+          $termo = htmlspecialchars($_GET['termo']);
+          $numero = htmlspecialchars($_GET['numero']);
+          print "Exibindo $numero resultados para busca por <em>$termo</em>."
+184:
+  - data:
+      question: Filtre os campos de email com o filtro `FILTER_VALIDATE_EMAIL` e confirme o registro do usuário.
+      files:
         - index: 0
           name: index.php
           editable: true
@@ -258,19 +263,19 @@
               if ($email && $confirma && $email == $confirma) {
                 print 'Obrigado, seu registro foi realizado.';
               }
-      expected:
-        expected_answer: |
-          <?php
-            $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-            $confirma = filter_var($_POST['confirma_email'], FILTER_VALIDATE_EMAIL);
-            // Checa se $email e $confirma passaram na validação e se são emails iguais.
-            if ($email && $confirma && $email == $confirma) {
-              print 'Obrigado, seu registro foi realizado.';
-            }
-- Aula 10:
-  - Unidade 1:
-    - question: Inclua primeiro o arquivo `xadrez.inc` xadrex usando o `include_once` e em seguida o arquivo `jogo.tpl.php` usando `include`.
-      data:
+    expected:
+      expected_answer: |
+        <?php
+          $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+          $confirma = filter_var($_POST['confirma_email'], FILTER_VALIDATE_EMAIL);
+          // Checa se $email e $confirma passaram na validação e se são emails iguais.
+          if ($email && $confirma && $email == $confirma) {
+            print 'Obrigado, seu registro foi realizado.';
+          }
+189:
+  - data:
+      question: Inclua primeiro o arquivo `xadrez.inc` xadrex usando o `include_once` e em seguida o arquivo `jogo.tpl.php` usando `include`.
+      files:
         - index: 1
           name: xadrez.inc
           content: |
@@ -304,22 +309,23 @@
               }?>
 
               include();
-      expected:
-        expected_answer: |
-          <?php
-            include_once('xadrez.inc');
+    expected:
+      expected_answer: |
+        <?php
+          include_once('xadrez.inc');
 
-            // Prepara os dados para enviar para o template.
-            if ($minjogadores == $maxjogadores) {
-              $jogadores = $minjogadores;
-            } else {
-              $jogadores = "$minjogadores a $maxjogadores";
-            }?>
+          // Prepara os dados para enviar para o template.
+          if ($minjogadores == $maxjogadores) {
+            $jogadores = $minjogadores;
+          } else {
+            $jogadores = "$minjogadores a $maxjogadores";
+          }?>
 
-            include('jogo.tpl.php');
-  - Unidade 2:
-    - question: Inclua os arquivos `jogo.tpl.php`, `layout.tpl.php` e `xadrez.inc` na ordem certa.
-      data:
+          include('jogo.tpl.php');
+190:
+  - data:
+      question: Inclua os arquivos `jogo.tpl.php`, `layout.tpl.php` e `xadrez.inc` na ordem certa.
+      files:
         - index: 1
           name: xadrez.inc
           content: |
@@ -370,26 +376,27 @@
               $content = ob_get_clean()
 
               include();
-      expected:
-        expected_answer: |
-          <?php
-            include_once('xadrez.inc');
+    expected:
+      expected_answer: |
+        <?php
+          include_once('xadrez.inc');
 
-            // Prepara os dados para enviar para o template.
-            if ($minjogadores == $maxjogadores) {
-              $jogadores = $minjogadores;
-            } else {
-              $jogadores = "$minjogadores a $maxjogadores";
-            }?>
+          // Prepara os dados para enviar para o template.
+          if ($minjogadores == $maxjogadores) {
+            $jogadores = $minjogadores;
+          } else {
+            $jogadores = "$minjogadores a $maxjogadores";
+          }?>
 
-            ob_start();
-            include('jogo.tpl.php');
-            $content = ob_get_clean()
+          ob_start();
+          include('jogo.tpl.php');
+          $content = ob_get_clean()
 
-            include('layout.php');
-  - Unidade 3:
-    - question: Isole o processamento dos jogadores em uma função separada. Lembre-se que as variáveis são nomeadas na hora de definir a função. Lembre-se também que a função não deve atribuir o resultado a uma variável, mas devolver o resultado (com `return`). E não se esqueça de copiar e colar!
-      data:
+          include('layout.php');
+191:
+  - data:
+      question: Isole o processamento dos jogadores em uma função separada. Lembre-se que as variáveis são nomeadas na hora de definir a função. Lembre-se também que a função não deve atribuir o resultado a uma variável, mas devolver o resultado (com `return`). E não se esqueça de copiar e colar!
+      files:
         - index: 0
           name: utilidades.php
           editable: true
@@ -408,28 +415,28 @@
               function numero_de_jogadores($min, $max) {
 
               }
-      expected:
-        expected_answer: |
-          <?php
+    expected:
+      expected_answer: |
+        <?php
 
-            // Lógica original do arquivo index.php
-            // if ($minjogadores == $maxjogadores) {
-            //   $jogadores = $minjogadores;
-            // } else {
-            //   $jogadores = "$minjogadores a $maxjogadores";
-            // }
+          // Lógica original do arquivo index.php
+          // if ($minjogadores == $maxjogadores) {
+          //   $jogadores = $minjogadores;
+          // } else {
+          //   $jogadores = "$minjogadores a $maxjogadores";
+          // }
 
-            function numero_de_jogadores($min, $max) {
-              if ($min == $max) {
-                return $min;
-              } else {
-                return "$min a $max.";
-              }
+          function numero_de_jogadores($min, $max) {
+            if ($min == $max) {
+              return $min;
+            } else {
+              return "$min a $max.";
             }
-- Aula 11:
-  - Unidade 1:
-    - question: Crie uma classe de objetos chamada `Livro` com três propriedades `titulo`, `autor` e `ano`
-      data:
+          }
+192:
+  - data:
+      question: Crie uma classe de objetos chamada `Livro` com três propriedades `titulo`, `autor` e `ano`
+      files:
         - index: 0
           name: livro.php
           editable: true
@@ -438,16 +445,17 @@
           content: |
             <?php
               
-      expected:
-        expected_answer: |
-          <?php
-            class Livro {
-              public $titulo;
-              public $autor;
-              public $ano;
-            }
-    - question: Agora crie um objeto do tipo `Livro` (usando `new`) e defina as propriedades como descrito nos comentários do código.
-      data:
+    expected:
+      expected_answer: |
+        <?php
+          class Livro {
+            public $titulo;
+            public $autor;
+            public $ano;
+          }
+  - data:
+      question: Agora crie um objeto do tipo `Livro` (usando `new`) e defina as propriedades como descrito nos comentários do código.
+      files:
         - index: 1
           name: livro.php
           content: |
@@ -462,7 +470,7 @@
         - index: 0
           name: index.php
           editable: true
-          lock: []
+          lock: [0,1,2,4,5,6]
           cursor: [0, 0]
           content: |
             <?php
@@ -472,20 +480,21 @@
 
               // Declare 'Machado de Assis' como autor, 1899 como ano e 'Dom Casmurro' como titulo.
               $livro->autor = ;
-      expected:
-        expected_answer: |
-          <?php
-            require 'livro.php';
+    expected:
+      expected_answer: |
+        <?php
+          require 'livro.php';
 
-            $livro = new Livro();
+          $livro = new Livro();
 
-            // Declare 'Machado de Assis' como autor, 1899 como ano e 'Dom Casmurro' como titulo.
-            $livro->autor = 'Machado de Assis';
-            $livro->ano = 1899;
-            $livro->titulo = 'Dom Casmurro';
-  - Unidade 2:
-    - question: Imprima o século do livro usando o método `seculo`.
-      data:
+          // Declare 'Machado de Assis' como autor, 1899 como ano e 'Dom Casmurro' como titulo.
+          $livro->autor = 'Machado de Assis';
+          $livro->ano = 1899;
+          $livro->titulo = 'Dom Casmurro';
+193:
+  - data:
+      question: Imprima o século do livro usando o método `seculo`.
+      files:
         - index: 1
           name: livro.php
           content: |
@@ -507,7 +516,7 @@
         - index: 0
           name: index.php
           editable: true
-          lock: []
+          lock: [0,1,2,3,4,5,6,7]
           cursor: [0, 0]
           content: |
             <?php
@@ -519,20 +528,21 @@
               $livro->titulo = 'Dom Casmurro';
 
               print $livro->titulo . " foi escrito no século " . ;
-      expected:
-        expected_answer: |
-          <?php
-            require 'livro.php';
+    expected:
+      expected_answer: |
+        <?php
+          require 'livro.php';
 
-            $livro = new Livro();
-            $livro->autor = 'Machado de Assis';
-            $livro->ano = 1899;
-            $livro->titulo = 'Dom Casmurro';
+          $livro = new Livro();
+          $livro->autor = 'Machado de Assis';
+          $livro->ano = 1899;
+          $livro->titulo = 'Dom Casmurro';
 
-            print $livro->titulo . " foi escrito no século " . $livro->seculo();
-  - Unidade 3:
-    - question: Crie um objeto representando o livro Dom Casmurro. Leia a função `Livro->__construct` para conferir os argumentos.
-      data:
+          print $livro->titulo . " foi escrito no século " . $livro->seculo();
+194:
+  - data:
+      question: Crie um objeto representando o livro Dom Casmurro. Leia a função `Livro->__construct` para conferir os argumentos.
+      files:
         - index: 1
           name: livro.php
           content: |
@@ -566,9 +576,54 @@
               // $livro->titulo = 'Dom Casmurro';
 
               $livro = new Livro();
-      expected:
-        expected_answer: |
-          <?php
+    expected:
+      expected_answer: |
+        <?php
+            require 'livro.php';
+
+            // @XXX: Código antigo, usar o novo método __construct
+            // $livro = new Livro();
+            // $livro->autor = 'Machado de Assis';
+            // $livro->ano = 1899;
+            // $livro->titulo = 'Dom Casmurro';
+
+            $livro = new Livro('Machado de Assis', 1899, 'Dom Casmurro');
+195:
+  - data:
+      question: Crie um objeto representando a edição 491 do quadrinho do Batman. Leia a função `HQ->__construct` para conferir os argumentos.
+      files:
+        - index: 1
+          name: livro.php
+          content: |
+            <?php
+
+              class Livro {
+                public $titulo;
+                public $autor;
+                public $ano;
+
+                public function __construct($titulo, $ano, $autor='Desconhecido') {
+                  $this->$titulo = $titulo;
+                  $this->$ano = $ano;
+                  $this->$autor = $autor;
+                }
+              }
+
+              class HQ extends Livro {
+                public $edicao;
+
+                public function __construct($titulo, $ano, $autor='Desconhecido', $edicao=NULL) {
+                  parent::__construct($titulo, $ano, $autor='Desconhecido');
+                  $this->edicao = $edicao;
+                }
+              }
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,1,2,3,4,5,6,7,8,9]
+          cursor: [21, 10]
+          content: |
+            <?php
               require 'livro.php';
 
               // @XXX: Código antigo, usar o novo método __construct
@@ -577,4 +632,200 @@
               // $livro->ano = 1899;
               // $livro->titulo = 'Dom Casmurro';
 
+              $livro = new Livro();
+    expected:
+      expected_answer: |
+        <?php
+            require 'livro.php';
+
+            // @XXX: Código antigo, usar o novo método __construct
+            // $livro = new Livro();
+            // $livro->autor = 'Machado de Assis';
+            // $livro->ano = 1899;
+            // $livro->titulo = 'Dom Casmurro';
+
+            $livro = new Livro('Machado de Assis', 1899, 'Dom Casmurro');
+198:
+  - data:
+      question: Execute a query abaixo passando os valores corretos no array.
+      files:
+        - index: 1
+          name: livro.php
+          content: |
+            <?php
+
+              class Livro {
+                public $titulo;
+                public $autor;
+                public $ano;
+
+                public function __construct($titulo, $ano, $autor='Desconhecido') {
+                  $this->$titulo = $titulo;
+                  $this->$ano = $ano;
+                  $this->$autor = $autor;
+                }
+              }
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,1,2,3,4,5,6,7,8,12]
+          cursor: [17,9]
+          content: |
+            <?php
+              require 'livro.php';
               $livro = new Livro('Machado de Assis', 1899, 'Dom Casmurro');
+
+              $handle = new PDO('mysql:host=localhost;dbname=aplicativo', 'admin', 'admin');
+              $consulta = $handle->prepare(
+                'INSERT INTO livros (titulo, autor, ano) VALUES (:titulo, :autor, :ano)'
+              );
+              $consulta->execute(array(
+                ':titulo' => ,
+                ':autor' => ,
+                ':ano' => ,
+              ));
+    expected:
+      expected_answer: |
+        <?php
+          require 'livro.php';
+          $livro = new Livro('Machado de Assis', 1899, 'Dom Casmurro');
+
+          $handle = new PDO('mysql:host=localhost;dbname=aplicativo', 'admin', 'admin');
+          $consulta = $handle->prepare(
+            'INSERT INTO livros (titulo, autor, ano) VALUES (:titulo, :autor, :ano)'
+          );
+          $consulta->execute(array(
+            ':titulo' => $livro->titulo,
+            ':autor' => $livro->autor,
+            ':ano' => $livro->ano,
+          ));
+200:
+  - data:
+      question: Recupere do banco de dados todos os livros do Machado de Assis.
+      files:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,1,3,4,5,6]
+          cursor: [27,2]
+          content: |
+            <?php
+              $consulta = $handle->prepare('SELECT * FROM livros WHERE autor=:id');
+              $consulta->execute(array());
+
+              while ($resultado = $consulta->fetchObject()) {
+                print "<li>$resultado->titulo</li>";
+              }
+    expected:
+      expected_answer: |
+        <?php
+          $consulta = $handle->prepare('SELECT * FROM livros WHERE autor=:id');
+          $consulta->execute(array(':autor' => 'Machado de Assis'));
+
+          while ($resultado = $consulta->fetchObject()) {
+            print "<li>$resultado->titulo</li>";
+          }
+201:
+  - data:
+      question: Use `is_numeric` para exibir uma mensagem de erro para o usuário.
+      files:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,1,2,4,5,6]
+          cursor: [6,3]
+          content: |
+            <?php
+              // A idade do usuário vem em $_GET['idade'], vamos tirar um eventual espaço que venha junto.
+              $idade = trim($_GET['idade']);
+              if () {
+                print 'Por favor informe sua idade usando apenas números.'
+              }
+    expected:
+      expected_answer: |
+        <?php
+          // A idade do usuário vem em $_GET['idade'], vamos tirar um eventual espaço que venha junto.
+          $idade = trim($_GET['idade']);
+          if (!is_numeric($idade)) {
+            print 'Por favor informe sua idade usando apenas números.'
+          }
+  - data:
+      question: Cheque se o nome do usuário foi preenchido (usando `empty`) e se começa com 'Capi' (usando `strpos`).
+      files:
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,1,2,3,5,6,8,9]
+          cursor: [6,4]
+          content: |
+            <?php
+              // O nome do usuário vem em $_GET['nome'], vamos tirar um eventual espaço que venha junto.
+              $nome = trim($_GET['nome']);
+
+              if () {
+                print 'Por favor, não deixe de informar seu nome.'
+              }
+              else if () {
+                print 'Oi Capi!.'
+              }
+    expected:
+      expected_answer: |
+        <?php
+          // O nome do usuário vem em $_GET['nome'], vamos tirar um eventual espaço que venha junto.
+          $nome = trim($_GET['nome']);
+
+          if (empty($nome)) {
+            print 'Por favor, não deixe de informar seu nome.'
+          }
+          else if (strpos($nome, 'Capi') === 0) {
+            print 'Oi Capi!.'
+          }
+203:
+  - data:
+      question: Filtre todos os produtos que tem um estoque menor do que 3.
+      files:
+        - index: 1
+          name: produto.inc
+          content: |
+            <?php
+            class Produto {
+              public $nome;
+              public $estoque;
+
+              public function __construct($nome, $estoque=0) {
+                $this->nome = $nome;
+                $this->estoque = $estoque;
+              }
+            }
+        - index: 0
+          name: index.php
+          editable: true
+          lock: [0,1,2,3,4,5,6,7,8,9,11]
+          cursor: [0,10]
+          content: |
+            <?php
+              require 'produto.inc';
+              $produtos = array(
+                Produto('frigideira', 10),
+                Produto('bule', 0),
+                Produto('chaleira', 5),
+                Produto('panela de pressão', 5),
+                Produto('wok', 0),
+              );
+              $produtos_no_estoque = array_filter($produtos, function($produto) {
+
+              });
+    expected:
+      expected_answer: |
+        <?php
+          require 'produto.inc';
+          $produtos = array(
+            Produto('frigideira', 10),
+            Produto('bule', 0),
+            Produto('chaleira', 5),
+            Produto('panela de pressão', 5),
+            Produto('wok', 0),
+          );
+          $produtos_no_estoque = array_filter($produtos, function($produto) {
+            return $produto->estoque;
+          });
